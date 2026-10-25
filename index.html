@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Girus Disco Show | A maior casa de shows: agenda, camarotes e ingressos
+    </title>
+    <meta
+      name="description"
+      content="Girus Disco Show: casa de show com os maiores cantores e bandas, camarotes, bar completo e eventos. Veja a agenda e compre seu ingresso online."
+    />
+    <meta property="og:title" content="Girus Disco Show" />
+    <meta
+      property="og:description"
+      content="Shows ao vivo, camarotes e a melhor estrutura. Compre seu ingresso online."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="nav" id="nav">
+      <a href="#inicio" class="logo">GIRUS<span>disco show</span></a>
+      <button
+        class="burger"
+        id="burger"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+      >
+        <i></i><i></i><i></i>
+      </button>
+      <nav id="menu">
+        <a href="#shows">Shows</a>
+        <a href="#sobre">A casa</a>
+        <a href="#camarotes">Camarotes</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#contato">Contato</a>
+        <a href="#shows" class="btn small">Comprar ingresso</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="beam b1"></div>
+        <div class="beam b2"></div>
+        <div class="beam b3"></div>
+        <!-- Coloque seu vídeo em video/casa.mp4 (e opcional video/casa.webm). Poster: img/capa.jpg -->
+        <video
+          id="hv"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="img/capa.jpg"
+        >
+          <source src="video/casa.webm" type="video/webm" />
+          <source src="videoplayback.mp4" type="video/mp4" />
+        </video>
+        <div class="shade"></div>
+        <div class="hero-text">
+          <p class="tag">Bem-vindo à Girus</p>
+          <h1>A maior noite de shows <em>da cidade</em>.</h1>
+          <p class="lead">
+            Os maiores cantores e bandas, som e luz de cinema, camarotes e bar
+            completo. Viva a noite como ela merece.
+          </p>
+          <div class="cta">
+            <a href="#shows" class="btn">Ver agenda e ingressos</a>
+            <a href="#camarotes" class="btn ghost">Reservar camarote</a>
+          </div>
+          <div class="next" id="next" hidden>
+            <small>PRÓXIMO SHOW</small>
+            <strong id="nextName"></strong>
+            <div class="count" id="count"></div>
+          </div>
+        </div>
+        <div class="vctl">
+          <button id="vplay" aria-label="Pausar vídeo">❚❚</button>
+          <button id="vmute" aria-label="Ativar som">🔇</button>
+        </div>
+        <a href="#shows" class="down" aria-label="Rolar para baixo"><i></i></a>
+      </section>
+
+      <div class="marquee" aria-hidden="true">
+        <div>
+          <span>SHOWS AO VIVO</span><span>★</span><span>CAMAROTES</span
+          ><span>★</span><span>BAR COMPLETO</span><span>★</span
+          ><span>SOM E LUZ DE CINEMA</span><span>★</span><span>EVENTOS</span
+          ><span>★</span> <span>SHOWS AO VIVO</span><span>★</span
+          ><span>CAMAROTES</span><span>★</span><span>BAR COMPLETO</span
+          ><span>★</span><span>SOM E LUZ DE CINEMA</span><span>★</span
+          ><span>EVENTOS</span><span>★</span>
+        </div>
+      </div>
+
+      <section id="shows" class="sec">
+        <h2>Próximos shows</h2>
+        <p class="sub">Escolha seu show e garanta o ingresso online.</p>
+        <div class="chips" id="chips"></div>
+        <div class="shows" id="shows-list"></div>
+        <p class="empty" id="empty" hidden>
+          Nenhum show nesta categoria por enquanto. Volte em breve!
+        </p>
+      </section>
+
+      <section id="sobre" class="sec dark">
+        <div class="split">
+          <div class="reveal">
+            <p class="tag">Sobre a Girus</p>
+            <h2 class="left">Uma casa feita para <em>grandes noites</em>.</h2>
+            <p class="txt">
+              Há anos a Girus reúne os maiores nomes da música em um só lugar.
+              Palco amplo, som profissional, iluminação cênica e uma equipe
+              preparada para que cada detalhe seja perfeito, do portão ao último
+              acorde.
+            </p>
+            <ul class="ticks">
+              <li>Palco e pista de grande porte</li>
+              <li>Sistema de som e luz profissional</li>
+              <li>Bar completo e cozinha</li>
+              <li>Segurança e acessibilidade</li>
+            </ul>
+          </div>
+          <div class="stats">
+            <div class="reveal">
+              <b data-n="15">0</b><span>anos de história</span>
+            </div>
+            <div class="reveal">
+              <b data-n="800">0</b><span>shows realizados</span>
+            </div>
+            <div class="reveal">
+              <b data-n="2500">0</b><span>pessoas por noite</span>
+            </div>
+            <div class="reveal">
+              <b data-n="300">0</b><span>artistas no palco</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="camarotes" class="sec">
+        <h2>Camarotes e mesas</h2>
+        <p class="sub">A melhor vista do palco, com atendimento exclusivo.</p>
+        <div class="tiers">
+          <article class="tier reveal">
+            <h3>Mesa</h3>
+            <p class="from">a partir de <b>R$ 300</b></p>
+            <ul>
+              <li>Até 4 pessoas</li>
+              <li>Lugar reservado</li>
+              <li>Atendimento no local</li>
+            </ul>
+            <a class="btn ghost reserve" data-r="Mesa" href="#contato"
+              >Reservar</a
+            >
+          </article>
+          <article class="tier hot reveal">
+            <span class="badge">Mais procurado</span>
+            <h3>Camarote</h3>
+            <p class="from">a partir de <b>R$ 900</b></p>
+            <ul>
+              <li>Até 10 pessoas</li>
+              <li>Vista privilegiada do palco</li>
+              <li>Entrada exclusiva</li>
+              <li>Garçom dedicado</li>
+            </ul>
+            <a class="btn reserve" data-r="Camarote" href="#contato"
+              >Reservar</a
+            >
+          </article>
+          <article class="tier reveal">
+            <h3>Camarote Premium</h3>
+            <p class="from">sob consulta</p>
+            <ul>
+              <li>Até 20 pessoas</li>
+              <li>Área VIP com bar próprio</li>
+              <li>Acesso ao backstage*</li>
+              <li>Estacionamento VIP</li>
+            </ul>
+            <a
+              class="btn ghost reserve"
+              data-r="Camarote Premium"
+              href="#contato"
+              >Reservar</a
+            >
+          </article>
+        </div>
+        <p class="note">Valores de exemplo. *Sujeito à agenda do artista.</p>
+      </section>
+
+      <section id="galeria" class="sec dark">
+        <h2>Galeria</h2>
+        <p class="sub">Alguns momentos das nossas noites.</p>
+        <div class="gal">
+          <figure class="g1 reveal" data-ini="G">
+            <img
+              src="teste1.jpeg"
+              alt="Show na Girus"
+              loading="lazy"
+              onerror="this.remove()"
+            />
+          </figure>
+          <figure class="reveal" data-ini="I">
+            <img
+              src="test2.jpeg"
+              alt="Pista lotada"
+              loading="lazy"
+              onerror="this.remove()"
+            />
+          </figure>
+          <figure class="reveal" data-ini="R">
+            <img
+              src="teste3.jpeg"
+              alt="Camarote"
+              loading="lazy"
+              onerror="this.remove()"
+            />
+          </figure>
+          <figure class="reveal" data-ini="U">
+            <img
+              src="leo.jpeg"
+              alt="Bar"
+              loading="lazy"
+              onerror="this.remove()"
+            />
+          </figure>
+          <figure class="g2 reveal" data-ini="S">
+            <img
+              src="show1.jpeg"
+              alt="Palco"
+              loading="lazy"
+              onerror="this.remove()"
+            />
+          </figure>
+          <figure class="reveal" data-ini="★">
+            <img
+              src="test2.jpeg"
+              alt="Público"
+              loading="lazy"
+              onerror="this.remove()"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section id="eventos" class="sec">
+        <div class="split">
+          <div class="reveal">
+            <p class="tag">Eventos fechados</p>
+            <h2 class="left">Alugue a Girus para o <em>seu evento</em>.</h2>
+            <p class="txt">
+              Aniversários, formaturas, confraternizações e eventos corporativos
+              com palco, som, luz e equipe completa.
+            </p>
+            <a href="#contato" class="btn reserve" data-r="Evento fechado"
+              >Pedir proposta</a
+            >
+          </div>
+          <div class="grid two">
+            <article class="card reveal">
+              <span>🎓</span>
+              <h3>Formaturas</h3>
+              <p>Noite completa para a turma.</p>
+            </article>
+            <article class="card reveal">
+              <span>🎂</span>
+              <h3>Aniversários</h3>
+              <p>Da festa de 15 anos às bodas.</p>
+            </article>
+            <article class="card reveal">
+              <span>🏢</span>
+              <h3>Corporativo</h3>
+              <p>Lançamentos e confraternizações.</p>
+            </article>
+            <article class="card reveal">
+              <span>🎤</span>
+              <h3>Shows privados</h3>
+              <p>Artista exclusivo para você.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="depoimentos" class="sec dark">
+        <h2>Quem foi, recomenda</h2>
+        <div class="slider" id="slider">
+          <blockquote class="show">
+            “Som perfeito, bar rápido e uma energia que não se encontra em
+            qualquer lugar.”<cite>Mariana R., frequentadora</cite>
+          </blockquote>
+          <blockquote>
+            “O camarote valeu cada centavo. Atendimento nota 10 do começo ao
+            fim.”<cite>Carlos E., camarote</cite>
+          </blockquote>
+          <blockquote>
+            “Fizemos nossa formatura na Girus e foi simplesmente
+            inesquecível.”<cite>Turma de Administração</cite>
+          </blockquote>
+          <div class="dots" id="dots"></div>
+        </div>
+      </section>
+
+      <section id="faq" class="sec">
+        <h2>Dúvidas frequentes</h2>
+        <div class="faq">
+          <details>
+            <summary>Como recebo meu ingresso?</summary>
+            <p>
+              Após a compra no site de vendas, o ingresso chega por e-mail com
+              QR Code. É só apresentar na entrada.
+            </p>
+          </details>
+          <details>
+            <summary>Qual a classificação indicativa?</summary>
+            <p>
+              É informada em cada evento. Menores devem estar acompanhados dos
+              responsáveis.
+            </p>
+          </details>
+          <details>
+            <summary>Posso reservar camarote ou mesa?</summary>
+            <p>
+              Sim! Use o formulário de contato e nossa equipe responde pelo
+              WhatsApp.
+            </p>
+          </details>
+          <details>
+            <summary>E se o show for adiado?</summary>
+            <p>
+              Seu ingresso continua válido para a nova data. Também é possível
+              pedir reembolso conforme a lei.
+            </p>
+          </details>
+          <details>
+            <summary>Tem estacionamento?</summary>
+            <p>
+              Sim, com segurança. Informe-se sobre vagas e valores na sua
+              reserva.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section id="contato" class="sec dark">
+        <h2>Fale com a Girus</h2>
+        <p class="sub">Reservas, eventos fechados e informações.</p>
+        <div class="contact">
+          <form id="form" novalidate>
+            <label
+              >Nome<input name="nome" required autocomplete="name"
+            /></label>
+            <label
+              >Assunto
+              <select name="tipo" id="tipo" required>
+                <option value="">Selecione</option>
+                <option>Mesa</option>
+                <option>Camarote</option>
+                <option>Camarote Premium</option>
+                <option>Evento fechado</option>
+                <option>Outro</option>
+              </select>
+            </label>
+            <label>Show / data<input name="show" /></label>
+            <label
+              >Nº de pessoas<input type="number" min="1" name="pessoas"
+            /></label>
+            <label class="full"
+              >Mensagem<textarea name="msg" rows="3"></textarea>
+            </label>
+            <button class="btn full" type="submit">Falar no WhatsApp</button>
+            <p class="err" id="err" role="alert"></p>
+          </form>
+          <aside class="info-box">
+            <h3>Como chegar</h3>
+            <p>📍 Rua Exemplo, 123, Centro<br />Sua Cidade - UF</p>
+            <h3>Funcionamento</h3>
+            <p>
+              🕙 Quinta a domingo, a partir das 20h<br />(ou conforme a agenda
+              de shows)
+            </p>
+            <h3>Contato</h3>
+            <p>📞 (00) 00000-0000<br />✉️ contato@girus.com.br</p>
+            <a class="btn ghost" id="maps" target="_blank" rel="noopener"
+              >Abrir no mapa</a
+            >
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="fcols">
+        <div>
+          <div class="logo">GIRUS<span>disco show</span></div>
+          <p>A casa de shows que faz a sua noite ser inesquecível.</p>
+        </div>
+        <div>
+          <h4>Navegue</h4>
+          <a href="#shows">Shows</a><a href="#sobre">A casa</a
+          ><a href="#camarotes">Camarotes</a><a href="#galeria">Galeria</a>
+        </div>
+        <div>
+          <h4>Ajuda</h4>
+          <a href="#faq">Dúvidas</a><a href="#eventos">Eventos fechados</a
+          ><a href="#contato">Contato</a>
+        </div>
+        <div>
+          <h4>Redes</h4>
+          <a href="#" target="_blank" rel="noopener">Instagram</a
+          ><a href="#" target="_blank" rel="noopener">Facebook</a
+          ><a href="#" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+      <p class="copy">
+        © <span id="ano"></span> Girus Disco Show. Todos os direitos reservados.
+      </p>
+    </footer>
+
+    <a
+      class="wpp"
+      id="wpp"
+      target="_blank"
+      rel="noopener"
+      aria-label="Falar no WhatsApp"
+      >💬</a
+    >
+    <script src="script.js"></script>
+  </body>
+</html>
