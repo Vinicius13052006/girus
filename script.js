@@ -7,7 +7,7 @@
   // link: página de venda do ingresso (Sympla, Eventim, etc.)
   // esgotado: true mostra "Esgotado" e desativa o botão
   const SHOWS = [
-    { artista: "Leo foguete", genero: "funk", data: "2026-11-13T22:00", foto: "leo.jpeg", preco: "a partir de R$ 60", link: "https://www.sympla.com.br/", esgotado: false },,
+    { artista: "Leo foguete", genero: "forró", data: "2026-11-13T22:00", foto: "leo.jpeg", preco: "a partir de R$ 60", link: "https://www.sympla.com.br/", esgotado: false },,
     { artista: "dino fonseca",   genero: "Rock",    data: "2026-11-01T23:59", foto: "show1.jpeg",   preco: "a partir de R$ 40", link: "https://www.sympla.com.br/", esgotado: false },
     { artista: "mariana fagundes",   genero: "sertanejo",    data: "2026-11-01T23:59", foto: "show2.jpeg",   preco: "a partir de R$ 40", link: "https://www.sympla.com.br/", esgotado: true },
   
